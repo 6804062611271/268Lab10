@@ -1,43 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-struct studentRecord {
-    char name[64];
-    int age;
-};
-//functions prototype
-void displayRecord(struct studentRecord student);
-void addAge(struct studentRecord *student, int age);
+struct Books{
+    int BookID;
+    char BookTitle[50];
+} ComputerBook;
 
-int main () {
-    struct studentRecord student[5];
-    char tempName[64]; 
-    int i;
-    
-    
-    for(i = 0; i < 5; i++) {
-        sprintf(tempName, "Student%d", i);
-        strcpy(student[i].name, tempName);
-        student[i].age = i+15;
-    }
-    
-    for(i = 0; i < 5; i++){
-        addAge(&student[i], 10);
-    }
-    
-    for(i = 0; i < 5; i++){
-        displayRecord(student[i]);
-    }
+void DisplayData(struct Books CBook);
+
+int main() {
+
+    printf("Enter Book ID : ");
+    scanf("%d", &ComputerBook.BookID);
+
+    printf("Enter Book Title : ");
+    scanf("%s", ComputerBook.BookTitle);
+
+    DisplayData(ComputerBook);
 
     return 0;
 }
 
-
-void addAge(struct studentRecord *student, int age){
-    student->age = student->age + age;
-}
-
-void displayRecord(struct studentRecord student){
-    printf("Name : %s, Age : %d\n", student.name, student.age);
+void DisplayData(struct Books CBook){
+    printf("Book ID : %d \n", CBook.BookID);
+    printf("Book Title : %s \n", CBook.BookTitle);
 }
