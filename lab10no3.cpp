@@ -25,3 +25,5 @@ void DisplayData(struct Books CBook){
     printf("Book Title : %s \n", CBook.BookTitle);
 }
 
+// void DisplayData(struct Books CBook) คือ ฟังก์ชันไว้แสดงข้อมูล Book ID และ Book Title
+// พารามิเตอร์ที่รับเข้ามา คือ CBook ของ struct
