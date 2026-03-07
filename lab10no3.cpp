@@ -9,7 +9,6 @@ struct Books{
 void DisplayData(struct Books CBook);
 
 int main() {
-
     printf("Enter Book ID : ");
     scanf("%d", &ComputerBook.BookID);
 
@@ -25,3 +24,4 @@ void DisplayData(struct Books CBook){
     printf("Book ID : %d \n", CBook.BookID);
     printf("Book Title : %s \n", CBook.BookTitle);
 }
+
